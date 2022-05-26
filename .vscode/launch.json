@@ -1,4 +1,3 @@
-
 {
     "version": "0.2.0",
     "configurations": [
@@ -9,15 +8,19 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=hello_remote_world",
-                    "--package=hello_remote_world",
-                    "--manifest-path=Cargo.toml"
+                    "--bin=add-tag-based-on-filename",
+                    "--package=add-tag-based-on-filename",
+                    "--manifest-path=./obsidian/add-tag-based-on-filename/Cargo.toml"
                 ],
                 "filter": {
                     "kind": "bin"
                 }
             },
-            "args": []
+            "args": [
+                "/users/yeah",
+                "Tarea",
+                "note/task"
+            ]
         }
     ]
 }

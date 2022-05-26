@@ -5,7 +5,7 @@ use std::path::PathBuf;
 fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().collect();
 
-    if args.len() < 3 {
+    if args.len() <= 3 {
         println!(
             "Usage: {} <Path> <Word to Search> <Tag to add, without #>",
             args[0]
