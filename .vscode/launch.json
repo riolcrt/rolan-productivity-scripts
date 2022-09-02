@@ -4,7 +4,7 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable",
+            "name": "Debug executable: add-tag-based-on-filename",
             "cargo": {
                 "args": [
                     "build",
@@ -20,6 +20,29 @@
                 "/users/yeah",
                 "Tarea",
                 "note/task"
+            ]
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable: share-files-with-collab-doc-repo",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=share-files-with-collab-doc-repo",
+                    "--package=share-files-with-collab-doc-repo",
+                    "--manifest-path=./obsidian/share-files-with-collab-doc-repo/Cargo.toml"
+                ],
+                "filter": {
+                    "kind": "bin"
+                }
+            },
+            //--source-dir <path> --dest-dir <path> --key <key> --branch <branch>
+            "args": [
+                "/workspaces/data",
+                ".",
+                "key",
+                "test-branch"
             ]
         }
     ]
