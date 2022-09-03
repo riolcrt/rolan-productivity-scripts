@@ -13,12 +13,17 @@ This file also serves as a test file to see if the script is working.
 ## Usage
 
 ```bash
-$ share-files-with-collab-doc-repo --source-dir /path/to/source/repo --dest-dir /path/to/collab/doc/repo --key key --branch branch-name
+$ share-files-with-collab-doc-repo --source-dir /path/to/source/repo --dest-dir /path/to/collab/doc/repo --key key 
 ```
 
 ### With docker container
     
 ```bash
-$ docker run -it --rm -v /path/to/source/repo:/source -v /path/to/collab/doc/repo:/collab share-files-with-collab-doc-repo --source-dir /source --dest-dir /collab --key key --branch branch-name
+export SOURCE_DIR=/path/to/source/repo
+export DEST_DIR=/path/to/collab/doc/repo
+
+docker build -t share-files-with-collab .
+
+$ docker run -it --rm -v $SOURCE_DIR:/source -v $DEST_DIR:/dest -t share-files-with-collab share-files-with-collab-doc-repo --source-dir /source --dest-dir /dest
 ```
 
